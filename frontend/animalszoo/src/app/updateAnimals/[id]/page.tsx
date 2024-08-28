@@ -33,7 +33,7 @@ export default function AnimalCreator() {
     if (id) {
       const fetchAnimal = async () => {
         try {
-          const response = await fetch(`http://localhost:5000/animals/view/${id}`)
+          const response = await fetch(`http://192.168.0.8:5000/animals/view/${id}`)
           if (!response.ok) {
             throw new Error('Error al obtener los datos del animal')
           }
@@ -65,7 +65,7 @@ export default function AnimalCreator() {
     
 
     try {
-      const response = await fetch(`http://localhost:5000/animals/${id}`, {  
+      const response = await fetch(`http://192.168.0.8:5000/animals/${id}`, {  
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

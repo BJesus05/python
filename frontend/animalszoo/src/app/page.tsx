@@ -33,7 +33,7 @@ export default function Component() {
   useEffect(() => {
     const fetchAnimalZoo = async () => {
       try {
-        const response = await fetch("http://localhost:5000/animals")
+        const response = await fetch("http://192.168.0.8:5000/animals")
         const data = await response.json()
         setAnimalZoo(data.map((item: any) => ({
           id: item._id,
@@ -56,7 +56,7 @@ export default function Component() {
   const handleDelete = async (id: number) => {
     if (confirm("¿Estás seguro de que deseas eliminar este animal?")) {
       try {
-        const response = await fetch(`http://localhost:5000/animals/${id}`, {
+        const response = await fetch(`http://192.168.0.8:5000/animals/${id}`, {
           method: 'DELETE'
         })
 

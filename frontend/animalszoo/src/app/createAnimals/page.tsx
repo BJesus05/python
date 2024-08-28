@@ -37,7 +37,7 @@
     const handleSubmit = async (e: React.FormEvent) => {
       e.preventDefault()
       try {
-        const response = await fetch('http://localhost:5000/animals', {
+        const response = await fetch('http://192.168.0.8:5000/animals', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
